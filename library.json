@@ -1,0 +1,80 @@
+{
+  "name": "papilio_lib_template",
+  "version": "0.1.0",
+  "description": "TODO: Brief description of your library's functionality",
+  "keywords": [
+    "papilio",
+    "wishbone",
+    "TODO: add relevant keywords"
+  ],
+  "authors": [
+    {
+      "name": "TODO: Your Name",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32"],
+  "dependencies": [
+    {
+      "name": "papilio_os",
+      "version": "*",
+      "optional": true
+    }
+  ],
+  "export": {
+    "include": [
+      "src/*.h",
+      "src/*.cpp",
+      "gateware/*.v",
+      "gateware/constraints/*.cst",
+      "README.md",
+      "AI_SKILL.md",
+      "examples/**"
+    ]
+  },
+  "papilio": {
+    "version": "1.0",
+    "gateware": {
+      "modules": [
+        {
+          "file": "gateware/papilio_template.v",
+          "module": "papilio_template",
+          "parameters": {
+            "BASE_ADDR": "16'h0000",
+            "DATA_WIDTH": 32
+          },
+          "description": "TODO: Describe your Wishbone module"
+        }
+      ]
+    },
+    "wishbone": {
+      "type": "slave",
+      "address_range": "TODO: e.g., 32 bytes (8 registers * 4 bytes)",
+      "data_width": 32,
+      "burst_support": false,
+      "features": ["read", "write"]
+    },
+    "esp32": {
+      "class": "PapilioTemplate",
+      "headers": ["PapilioTemplate.h"],
+      "init_params": {
+        "base_address": "TODO: e.g., 0x0000"
+      },
+      "init_code": "begin()",
+      "description": "TODO: Brief description of ESP32 API"
+    },
+    "cli": {
+      "enabled": true,
+      "os_plugin_class": "PapilioTemplateOS",
+      "os_plugin_header": "PapilioTemplateOS.h",
+      "commands": [
+        "status - Show device status",
+        "help - Show all commands",
+        "tutorial - Interactive tutorial",
+        "TODO: Add your library-specific commands"
+      ]
+    }
+  }
+}

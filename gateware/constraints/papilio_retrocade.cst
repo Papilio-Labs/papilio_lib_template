@@ -1,0 +1,22 @@
+# Papilio Retrocade Constraint File
+# Board: Papilio Retrocade
+# Module: papilio_template
+
+# TODO: Define your external pin assignments for Papilio Retrocade
+# Format: IO_LOC "signal_name" pin_number;
+# Example:
+# IO_LOC "ext_signal_out" 23;
+# IO_LOC "ext_signal_in" 24;
+
+# Common system signals (if needed)
+# Clock and reset are typically handled by the top-level design
+
+# TODO: Add IO standard specifications if needed
+# Format: IO_PORT "signal_name" IO_TYPE=LVCMOS33;
+# Example:
+# IO_PORT "ext_signal_out" IO_TYPE=LVCMOS33;
+
+# TODO: Document your pin assignments
+# Pin assignments for Papilio Retrocade:
+# - Pin XX: Signal description
+# - Pin YY: Signal description

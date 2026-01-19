@@ -1,0 +1,22 @@
+# Papilio Synth Constraint File
+# Board: Papilio Synth
+# Module: papilio_template
+
+# TODO: Define your external pin assignments for Papilio Synth
+# Format: IO_LOC "signal_name" pin_number;
+# Example:
+# IO_LOC "ext_signal_out" 45;
+# IO_LOC "ext_signal_in" 46;
+
+# Common system signals (if needed)
+# Clock and reset are typically handled by the top-level design
+
+# TODO: Add IO standard specifications if needed
+# Format: IO_PORT "signal_name" IO_TYPE=LVCMOS33;
+# Example:
+# IO_PORT "ext_signal_out" IO_TYPE=LVCMOS33;
+
+# TODO: Document your pin assignments
+# Pin assignments for Papilio Synth:
+# - Pin XX: Signal description
+# - Pin YY: Signal description
